@@ -172,3 +172,5 @@ To finish, the packet can be sent to the target using Scapy's `sendp()` function
 * Add some pre-developed attacking functions during interception
 * More docs
 
+## Fork Comments
+https://github.com/qca/open-plc-utils.git is needed for Connect.py to work
