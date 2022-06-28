@@ -167,4 +167,10 @@ class Network(object):
             Sniffer
             In(1): String device interface to sniff
         """
-        sniff(prn=self.analyse, iface=iface, L2socket=conf.L2socket)
+        def stopfilter(x):
+             if "CM_SLAC_MATCH_CNF" in x:
+                 return True
+             else:
+                 return False
+        
+        sniff(prn=self.analyse, iface=iface, L2socket=conf.L2socket, stop_filter=stopfilter)
