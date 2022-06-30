@@ -5,7 +5,7 @@ from core.Network import *
 
 
 #while(len(Network().hpgp) == 0):
-#    Network().sniff(eth1)
+#    Network().sniff('eth1')
 Network().pcap('PEV.pcap')
 for key in Network().hpgp:
     newDict = Network().hpgp[key]
